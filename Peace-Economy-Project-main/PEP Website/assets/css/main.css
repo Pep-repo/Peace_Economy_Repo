@@ -3610,3 +3610,16 @@ input, select, textarea {
 
 		}
 
+/* CSS for hiding and showing extra content */
+.more-text {
+    display: none; /* Initially hide the text */
+}
+
+.show-more .more-text {
+    display: inline; /* Display the text when parent has 'show-more' class */
+}
+
+/* Optional: Style the toggle button when expanded */
+.show-more .toggleButton {
+    /* Style changes for "Read Less" state, if desired */
+}

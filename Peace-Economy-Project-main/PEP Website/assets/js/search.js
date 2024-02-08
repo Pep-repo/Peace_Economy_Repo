@@ -5,8 +5,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (query) {
         const articles = document.querySelectorAll('.post');
         articles.forEach(article => {
-            const articleText = article.innerText.toLowerCase();
-            if (!articleText.includes(query)) {
+            // Include both visible and hidden text for search
+            const visibleText = article.innerText.toLowerCase();
+            const hiddenText = article.querySelector('.more-text') ? article.querySelector('.more-text').textContent.toLowerCase() : '';
+            const combinedText = visibleText + " " + hiddenText;
+
+            if (!combinedText.includes(query)) {
                 article.style.display = 'none';
             }
         });
