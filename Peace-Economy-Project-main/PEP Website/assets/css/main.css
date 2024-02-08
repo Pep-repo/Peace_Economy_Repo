@@ -3614,3 +3614,13 @@ input, select, textarea {
 	text-align: center;
 }
 
+#viewAllArticlesButton {
+	display: flex;
+	align-items: center;
+	/* Vertically centers the child elements */
+	justify-content: center;
+	/* Horizontally centers the child elements */
+	height: 100px;
+	/* Adjust the height as needed */
+}
+
